@@ -4,7 +4,9 @@ fun persistence(num: Int) : Int {
     return if (num < 10) {
         0
     } else {
-        1 + persistence(num.toString().toList().map { it.toString().toInt() }.reduce(Int::times))
+        1 + persistence(num.toString().toList().map {
+            it.toString().toInt()
+        }.reduce(Int::times))
     }
 }
 
